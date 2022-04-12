@@ -1,0 +1,66 @@
+.item{
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    scroll-snap-align: start;
+
+    &__container {
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__text {
+        margin-top: 20%;
+        display: flex;
+        flex-direction: column;
+        font-size: 34px;
+        color: #393c41;
+        align-items: center;
+        flex: 1;
+    }
+
+    &__textDesc {
+        font-weight: 200;
+        font-size: 14px;
+    }
+
+    &__lowerThird {
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__buttons {
+        display: flex;
+    }
+
+    &__expand {
+        color: white;
+        margin-top: 3%;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+    .SolarPanels {
+        background-image: url(../../../../assets/images/Desktop-SolarPanels.jpeg);
+    }
+
+    .ModelS {
+        background-image: url(../../../../assets/images/Desktop-ModelS.jpeg);
+    }
+
+    .Model3 {
+        background-image: url(../../../../assets/images/Desktop-Model3.jpeg);
+    }
+
+    .ModelX {
+        background-image: url(../../../../assets/images/Desktop-ModelX.jpeg);
+    }

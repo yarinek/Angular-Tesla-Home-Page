@@ -1,0 +1,19 @@
+<div class="item" [ngClass]="backgroundImg">
+    <div class="item__container">
+        <div class="item__text">
+            <p>{{title}}</p>
+            <div class="item__textDesc">
+                <p>{{desc}}</p>
+            </div>
+        </div>
+        <div class="item__lowerThird">
+            <div class="item__buttons">
+                <app-button [imp]="'primary'" [text]="leftBtnTxt" [link]="leftBtnLink"></app-button>
+                <app-button *ngIf="twoButtons" [imp]="'secondary'" [text]="rightBtnTxt" [link]="rightBtnLink"></app-button>
+            </div>
+            <div *ngIf="first" class="item__expand">
+                <img src="../../../../assets/images/expand_more_white_24dp.svg" />
+            </div>
+        </div>
+    </div>
+</div>
