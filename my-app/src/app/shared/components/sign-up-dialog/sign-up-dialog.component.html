@@ -1,0 +1,101 @@
+<h2 mat-dialog-title>
+  <span class="title">Sign in</span>
+  <button class="close-button" mat-button mat-dialog-close (click)="onCancel()">
+    <span class="material-icons">close</span>
+  </button>
+</h2>
+<div mat-dialog-content>
+  <form [formGroup]="dialogForm">
+    <mat-form-field>
+      <mat-label>Login</mat-label>
+      <input matInput required id="pass" formControlName="login" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        required
+        formControlName="password"
+        class="form-control"
+        type="password"
+      />
+    </mat-form-field>
+
+    <div class="errors">
+      <span *ngIf="dialogForm.controls.password.errors?.pattern" class="alert">
+        The password should contain from 8 to 32 characters including 1
+        lowercase letter, 1 uppercase letter, 1 number and 1 special character
+      </span>
+    </div>
+
+    <mat-form-field>
+      <mat-label>New Password</mat-label>
+      <input
+        matInput
+        required
+        formControlName="repeatedPassword"
+        class="form-control"
+        type="password"
+      />
+    </mat-form-field>
+
+    <div class="errors">
+      <span
+        *ngIf="dialogForm.controls.repeatedPassword.errors?.passwordNotSame"
+        class="alert"
+      >
+        The given password is not the same
+      </span>
+      <span
+        *ngIf="dialogForm.controls.repeatedPassword.errors?.pattern"
+        class="alert"
+      >
+        The password should contain from 8 to 32 characters including 1
+        lowercase letter, 1 uppercase letter, 1 number and 1 special character
+      </span>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        required
+        formControlName="email"
+        class="form-control"
+        type="email"
+      />
+    </mat-form-field>
+
+    <div class="errors">
+      <span *ngIf="dialogForm.controls.email.errors?.pattern" class="alert">
+        Please enter a valid email address
+      </span>
+    </div>
+
+    <section>
+      <p>
+        <mat-checkbox formControlName="acceptRules"
+          >Acceptance of Terms and Conditions</mat-checkbox
+        >
+      </p>
+      <p>
+        <mat-checkbox formControlName="acceptNotifications"
+          >Email notifications</mat-checkbox
+        >
+      </p>
+    </section>
+  </form>
+</div>
+
+<div class="mat-dialog-actions">
+  <button
+    mat-button
+    class="submit-button"
+    (click)="onSubmit()"
+    [disabled]="dialogForm.invalid || !dialogForm.controls.acceptRules.value"
+  >
+    Submit
+  </button>
+
+  <button mat-button class="cancel-button" (click)="onCancel()">Close</button>
+</div>

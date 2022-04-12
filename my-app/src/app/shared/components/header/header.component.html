@@ -1,16 +1,17 @@
 <div class="header">
-    <div class="header__logo">
-        <img src="../../../../assets/images/teslaLogo.svg" alt="Tesla Logo"/>
-    </div>
+  <div class="header__logo">
+    <img src="../../../../assets/images/teslaLogo.svg" alt="Tesla Logo" />
+  </div>
 
-    <div class="header__center">
-        <p *ngFor="let modelName of modelNames">
-            {{modelName}}
-        </p>
-    </div>
+  <div class="header__center">
+    <p class="menu-p" *ngFor="let modelName of modelNames">
+      {{ modelName }}
+    </p>
+  </div>
 
-    <div class="header__right">
-        <p>Shop</p>
-        <p>Tesla Account</p>
-    </div>
+  <div class="header__right">
+    <p *ngIf="login">Hello, {{ login }}</p>
+    <p class="menu-p">Shop</p>
+    <p class="menu-p" (click)="openSignInDialog()">Tesla Account</p>
+  </div>
 </div>

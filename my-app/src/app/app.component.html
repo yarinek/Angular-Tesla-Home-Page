@@ -1,19 +1,19 @@
 <div class="app">
-    <app-header></app-header>
-    <div class="app__itemsContainer">
-        <ng-container *ngFor="let item of itemDict">
-            <app-item 
-            [title]="item.title" 
-            [desc]="item.desc" 
-            [descLink]="item.descLink" 
-            [backgroundImg]="item.backgroundImg" 
-            [leftBtnTxt]="item.leftBtnTxt"
-            [leftBtnLink]="item.leftBtnLink"
-            [rightBtnTxt]="item.rightBtnTxt"
-            [rightBtnLink]="item.rightBtnLink"
-            [twoButtons]="item.twoButtons"
-            [first]="item.first"
-            ></app-item>
-        </ng-container>
-    </div>
+  <app-header></app-header>
+  <div class="app__itemsContainer">
+    <ng-container *ngFor="let item of itemDict">
+      <app-item
+        [title]="item.title"
+        [desc]="item.desc"
+        [descLink]="item.descLink"
+        [backgroundImg]="item.backgroundImg"
+        [leftBtnTxt]="item.leftBtnTxt"
+        [leftBtnLink]="item.leftBtnLink"
+        [rightBtnTxt]="item.rightBtnTxt"
+        [rightBtnLink]="item.rightBtnLink"
+        [twoButtons]="item.twoButtons"
+        [first]="item.first"
+      ></app-item>
+    </ng-container>
+  </div>
 </div>

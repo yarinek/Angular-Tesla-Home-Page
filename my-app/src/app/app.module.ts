@@ -6,6 +6,11 @@ import { AppComponent } from './app.component';
 import { ButtonComponent } from './shared/components/button/button.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { ItemComponent } from './shared/components/item/item.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { SignUpDialogComponent } from './shared/components/sign-up-dialog/sign-up-dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -13,12 +18,17 @@ import { ItemComponent } from './shared/components/item/item.component';
     ButtonComponent,
     HeaderComponent,
     ItemComponent,
+    SignUpDialogComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MaterialModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

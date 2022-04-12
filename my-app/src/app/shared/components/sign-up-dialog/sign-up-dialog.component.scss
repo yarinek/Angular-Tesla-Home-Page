@@ -1,0 +1,94 @@
+::ng-deep.mat-dialog-container {
+  padding: 0 0 20px 0;
+  overflow: hidden;
+  width: 600px;
+
+  input::placeholder {
+    font-size: 12px;
+  }
+
+  .mat-dialog-title {
+    background: gray;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+
+    span.title {
+      color: white;
+      padding: 5px 10px;
+      font-size: 16px;
+    }
+
+    button {
+      color: white;
+      padding: 0;
+
+      span {
+        background: transparent;
+      }
+    }
+
+    .close-button {
+      background-color: gray;
+    }
+  }
+
+  .mat-dialog-content {
+    background: rgb(211, 211, 211, 0.8);
+    padding: 10px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+
+    mat-form-field {
+      width: 100%;
+    }
+
+    .password-container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .errors {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+}
+
+.alert {
+  background-color: inherit;
+  border-left: 5px solid #f44336;
+  color: #f44336;
+  font-weight: 700;
+  padding-left: 5px;
+  font-size: 12px;
+  margin-bottom: 1px;
+}
+
+.mat-dialog-actions {
+  padding: 0 40px 10px 40px;
+  display: flex;
+  justify-content: center;
+  background: rgb(211, 211, 211, 0.8);
+
+  button {
+    min-width: 100px;
+
+    &.submit-button {
+      background-color: green;
+      color: white;
+
+      &:disabled {
+        opacity: 0.6;
+      }
+    }
+
+    &.cancel-button {
+      background: gray;
+      color: white;
+      border: 1px solid gray;
+    }
+  }
+}
